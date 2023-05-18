@@ -61,7 +61,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                     onChange={(e) => setSearch(e.target.value.toLowerCase())}
                     placeholder='Search Exercises'
                     type='text'
-                    onClick={handleSearch}
                 />
                 <Button className='search-btn'
                     sx={{
@@ -74,6 +73,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                         position: 'absolute',
                         right: '0'
                     }}
+                    onClick={handleSearch}
                 >
                     Search
                 </Button>
