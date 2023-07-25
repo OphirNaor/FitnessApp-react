@@ -41,7 +41,8 @@ const useStyles = makeStyles()(theme => ({
     },
     logoText: {
         fontWeight: 700,
-        fontSize: 28
+        fontSize: 30,
+        pointerEvents: 'none'
     }
 }))
 
@@ -66,7 +67,7 @@ const NavBar = () => {
     return (
         <Stack direction='row' justifyContent='flex-start' alignItems='center' className={scrollNavbar ? classes.scrollNavbar : classes.mainNavbar}>
             <Link to='/' style={{ textDecoration: 'none' }}>
-                <Typography className={clsx(classes.navbarLink, classes.logoText)} fontWeight='600' fontSize='26px' color='#e74848'>
+                <Typography className={clsx(classes.navbarLink, classes.logoText)}>
                     TrainWise
                 </Typography>
             </Link>
