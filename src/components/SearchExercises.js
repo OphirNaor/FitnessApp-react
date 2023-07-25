@@ -9,30 +9,30 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
     useEffect(() => {
         const fetchExercisesData = async () => {
-            const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+            // const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
 
-            setBodyParts(['all', ...bodyPartsData]);
+            // setBodyParts(['all', ...bodyPartsData]);
         }
 
         fetchExercisesData();
     }, [])
 
 
-    const handleSearch = async () => {
-        if (search) {
-            const exercisesData = await fetchData
-                ('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+    // const handleSearch = async () => {
+    //     if (search) {
+    //         const exercisesData = await fetchData
+    //             ('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
 
-            const searchExercises = exercisesData.filter((exercise) => exercise.name.toLowerCase().includes(search)
-                || exercise.target.toLowerCase().includes(search)
-                || exercise.equipment.toLowerCase().includes(search)
-                || exercise.bodyPart.toLowerCase().includes(search)
-            );
+    //         const searchExercises = exercisesData.filter((exercise) => exercise.name.toLowerCase().includes(search)
+    //             || exercise.target.toLowerCase().includes(search)
+    //             || exercise.equipment.toLowerCase().includes(search)
+    //             || exercise.bodyPart.toLowerCase().includes(search)
+    //         );
 
-            setSearch('');
-            setExercises(searchExercises);
-        }
-    }
+    //         setSearch('');
+    //         setExercises(searchExercises);
+    //     }
+    // }
 
     return (
         <Stack alignItems='center' mt='37px' justifyContent='center' p='20px'>
@@ -64,7 +64,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                 />
                 <Button className='search-btn'
                     sx={{
-                        bgcolor: '#F1C796',
+                        bgcolor: '#e74848',
                         color: '#FFFFFF',
                         textTransform: 'none',
                         width: { lg: '175px', xs: '80' },
@@ -73,7 +73,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                         position: 'absolute',
                         right: '0'
                     }}
-                    onClick={handleSearch}
+                // onClick={handleSearch}
                 >
                     Search
                 </Button>
